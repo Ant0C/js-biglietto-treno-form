@@ -4,21 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="./css/app.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <title>Document</title>
 </head>
 
-<body>
-    <div>
-        <h1 id="prezzo">Prezzo Biglietto</h1>
-        <input type="text" id="kmPercorsi" value="" class="" placeholder="Immetti i km">
-        <select name="select" id="select" class="">
-            <option value="">--Seleziona la tua fascia di età--</option>
-            <option value="Minorenne18">Minorenne 18 anni</option>
-            <option value="Adulto">Adulto</option>
-            <option value="Over65">Over 65</option>
-        </select>
-        <input type="button" id="button" class="" value="calcola">
+<body class="container bg-danger-subtle">
+    <div class="row mt-2 mb-2">
+        <div class="calcolaprezzo col-lg-10 bg-dark-subtle">
+            <div class="row justify-content-lg-around">
+                <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+                <div class="Dati col-lg-3">
+                    <p>Nome e cognome</p>
+                    <span id="nomeInserito">..</span>
+                    <span id="cognomeInserito">...</span>
+                </div>
+
+                <input type="text" id="kmPercorsi" value="" class="col-lg-3" placeholder="Immetti i km">
+
+                <select name="select" id="select" class="col-lg-3">
+                    <option value="">--Seleziona la tua fascia di età--</option>
+                    <option value="Minorenne18">Minorenne 18 anni</option>
+                    <option value="Adulto">Adulto</option>
+                    <option value="Over65">Over 65</option>
+                </select>
+            </div>
+            
+            <div class="row justify-content-lg-center mt-2 mb-2">
+                <input type="button" id="button" class="col-lg-4" value="calcola">
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-2 mb-2">
+        <div class="tuobiglietto col-lg-10 bg-dark-subtle">
+            <div class="row">
+                <h2 id="prezzo">Prezzo Biglietto</h2>
+
+                <div>
+                    <p>Nome e cognome</p>
+                    <span id="nomeBiglietto">...</span>
+                    <span id="cognomeBiglietto">...</span>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="./app.js"></script>

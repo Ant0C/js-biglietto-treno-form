@@ -1,15 +1,16 @@
 //  Nome viaggiatore
-// let nome = prompt('Il tuo nome')
-// //document.getElementById("nomeviaggiatore").innerHTML = "Nome Viaggiatore:" + " " + nome;
-// console.log(nome)
+
+let nome = prompt('Il tuo nome')
+document.getElementById("nomeInserito").innerHTML = nome;
+console.log(nome)
 
 // //  Cognome viaggiatore
-// let cognome = prompt('Il tuo cognome')
-// //document.getElementById("cognomeviaggiatore").innerHTML = "Cognome Viaggiatore:" + " " + cognome;
-// console.log(cognome)
 
+let cognome = prompt('Il tuo cognome')
+document.getElementById("cognomeInserito").innerHTML = cognome;
+console.log(cognome)
 
-//  Prezzo biglietto escluso sconto
+//Valori fissi
 
 const prezzokm = parseFloat(0.21) 
 const scontoMinori = parseFloat(0.80)
@@ -17,14 +18,17 @@ const scontoPensionati = parseFloat(0.60)
 
 //  Input dei Km da percorrere
 
-const inputDistanza = document.querySelector("#kmPercorsi");
+const inputDistanza = document.querySelector("#kmPercorsi ");
 parseFloat(inputDistanza);
 console.log(inputDistanza)
+
 //Selettore per la fascia di età
 
 const inputSelect = document.querySelector("#select");
 console.log(inputSelect)
+
 //Bottone per il calcolo
+
 const inputCalcola = document.querySelector("#button");
 console.log(inputCalcola)
 
@@ -32,6 +36,10 @@ console.log(inputCalcola)
 
 inputCalcola.addEventListener('click', function(){
     console.log('calcolo')
+
+    document.getElementById("nomeBiglietto").innerHTML = nome;
+    document.getElementById("cognomeBiglietto").innerHTML = cognome;
+
 
     let prezzoBiglietto = inputDistanza.value*prezzokm;
     console.log(prezzoBiglietto)
